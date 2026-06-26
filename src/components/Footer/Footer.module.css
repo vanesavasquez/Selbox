@@ -1,18 +1,22 @@
 .footer {
   background: var(--c-navy);
   color: #fff;
-  padding-block: 26px;
+  min-height: 27vh;
+  display: flex;
+  align-items: center;
+  padding-block: 1.8rem;
 }
 
 .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 1.75rem;
+  width: 100%;
 }
 
 .logo {
-  height: 46px;
+  height: 4rem;
   width: auto;
   flex-shrink: 0;
 }
@@ -20,7 +24,7 @@
 .where {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 0.875rem;
   transition: opacity 0.2s var(--ease);
 }
 .where:hover {
@@ -31,8 +35,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 50%;
   background: #fff;
   color: var(--c-navy);
@@ -46,20 +50,20 @@
 }
 .whereText strong {
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 1.4rem;
   letter-spacing: 0.02em;
 }
 .address {
   font-family: var(--font-alt);
   font-weight: 500;
   color: rgba(255, 255, 255, 0.86);
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .social {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 1.25rem;
   flex-shrink: 0;
 }
 .social a {
@@ -67,8 +71,12 @@
   color: #fff;
   transition: transform 0.2s var(--ease), color 0.2s var(--ease);
 }
+.social a svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
 .social a:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   color: #4f93f0;
 }
 
@@ -76,16 +84,16 @@
   .inner {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 1.25rem;
   }
   .where {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
   }
   .whereText {
     align-items: center;
   }
   .logo {
-    height: 42px;
+    height: 3.5rem;
   }
 }

@@ -11,8 +11,8 @@ const FRAMES = Object.keys(frameModules)
   .sort()
   .map((k) => frameModules[k])
 
-const FPS = 15
-const HOLD_MS = 900 // pausa con el contenedor lleno antes de reiniciar el loop
+const FPS = 7
+const HOLD_MS = 1400 // pausa con el contenedor lleno antes de reiniciar el loop
 
 export default function ContainerAnimation() {
   const wrapRef = useRef(null)

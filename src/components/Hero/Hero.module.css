@@ -2,6 +2,9 @@
   position: relative;
   background: var(--c-navy);
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Fondo full-bleed (solo desktop) */
@@ -12,20 +15,26 @@
 .inner {
   position: relative;
   z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 26px;
+  gap: 1.75rem;
 }
 
 .title {
   color: #fff;
   font-weight: 800;
+  font-size: 2.5rem;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  line-height: 1.08;
 }
 
 .accent {
@@ -35,38 +44,41 @@
 .subtitle {
   color: rgba(255, 255, 255, 0.88);
   font-weight: 500;
-  max-width: 38ch;
+  font-size: 1.8rem;
+  max-width: 32ch;
+  line-height: 1.35;
 }
 
 /* ===================== MOBILE ===================== */
 .frameMobile {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 1rem;
   object-fit: cover;
   aspect-ratio: 16 / 12;
-  margin-top: calc(var(--header-h) + 14px);
+  margin-top: calc(var(--header-h) + 0.875rem);
+  flex-shrink: 0;
 }
 
 @media (max-width: 1023px) {
+  .inner {
+    justify-content: flex-start;
+  }
   .content {
-    padding-bottom: 56px;
-    padding-top: 26px;
-    gap: 18px;
+    padding-bottom: 3.5rem;
+    padding-top: 1.625rem;
+    gap: 1.125rem;
   }
   .title {
-    font-size: clamp(1.9rem, 8.4vw, 2.4rem);
-    line-height: 1.08;
+    font-size: 2.5rem;
   }
   .subtitle {
-    font-size: clamp(0.85rem, 3.7vw, 1rem);
+    font-size: 1.3rem;
   }
 }
 
 /* ===================== DESKTOP ===================== */
 @media (min-width: 1024px) {
   .hero {
-    min-height: 100vh;
-    display: flex;
     align-items: flex-end;
   }
   .bgDesktop {
@@ -95,17 +107,17 @@
   }
   .inner {
     width: 100%;
+    justify-content: flex-end;
   }
   .content {
-    padding-bottom: clamp(70px, 12vh, 130px);
-    max-width: 760px;
-    gap: 30px;
+    padding-bottom: clamp(4.375rem, 12vh, 8.125rem);
+    max-width: 50rem;
+    gap: 1.875rem;
   }
   .title {
-    font-size: clamp(2.8rem, 4.4vw, 3.7rem);
-    line-height: 1.07;
+    font-size: 2.5rem;
   }
   .subtitle {
-    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    font-size: 1.8rem;
   }
 }

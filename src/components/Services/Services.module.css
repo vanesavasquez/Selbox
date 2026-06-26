@@ -1,25 +1,29 @@
 .services {
   background: #fff;
-  padding-block: clamp(56px, 8vw, 104px);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
   overflow: hidden;
 }
 
 .grid {
   display: grid;
-  gap: clamp(28px, 4vw, 60px);
+  gap: clamp(1.75rem, 4vw, 3.75rem);
   align-items: center;
+  width: 100%;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 1.125rem;
 }
 
 .title {
   color: var(--c-ink);
   font-weight: 800;
-  font-size: clamp(1.55rem, 3vw, 2.3rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   line-height: 1.12;
 }
 .accent {
@@ -27,7 +31,7 @@
 }
 
 .text :global(ul) {
-  margin-block: 4px;
+  margin-block: 0.25rem;
 }
 
 /* Recuadro azul de medidas */
@@ -35,23 +39,23 @@
   align-self: flex-start;
   background: var(--c-blue-accent);
   color: #fff;
-  border-radius: 16px;
-  padding: 20px 26px;
-  margin-top: 10px;
-  box-shadow: 0 12px 26px rgba(26, 98, 208, 0.28);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.625rem;
+  margin-top: 0.625rem;
+  box-shadow: 0 0.75rem 1.625rem rgba(26, 98, 208, 0.28);
 }
 .measuresTitle {
   display: block;
   font-weight: 800;
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
-  margin-bottom: 6px;
+  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  margin-bottom: 0.375rem;
 }
 .measuresList {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.125rem;
   font-weight: 500;
-  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 
 /* Media: contenedor animado + cotas */
@@ -80,15 +84,12 @@
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: 0.92fr 1.08fr;
+    grid-template-columns: 0.3fr 0.7fr;
   }
 }
 
 @media (max-width: 1023px) {
-  .grid {
-    /* en mobile: texto, medidas y luego contenedor (orden del diseño) */
-  }
   .media {
-    margin-top: 8px;
+    margin-top: 0.5rem;
   }
 }

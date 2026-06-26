@@ -2,6 +2,9 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  min-height: 63vh;
+  display: flex;
+  align-items: center;
 }
 
 .bg,
@@ -30,9 +33,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  min-height: 280px;
-  padding-block: clamp(48px, 7vw, 90px);
+  gap: 2rem;
+  width: 100%;
+  padding-block: 5vh;
 }
 
 .copy {
@@ -40,14 +43,14 @@
 }
 .title {
   font-weight: 800;
-  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
   line-height: 1.1;
 }
 .subtitle {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
-  font-size: clamp(1rem, 1.6vw, 1.35rem);
-  margin-top: 8px;
+  font-size: clamp(1.2rem, 1.8vw, 1.7rem);
+  margin-top: 0.5rem;
 }
 
 /* Botón ESCRIBINOS (Montserrat, como el diseño) */
@@ -64,7 +67,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 24px;
+    gap: 1.5rem;
   }
   .ctaFull {
     display: none;

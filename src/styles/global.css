@@ -85,10 +85,9 @@ h3 {
 
 /* Contenedor centrado reutilizable */
 .container {
-  width: 100%;
-  max-width: var(--maxw);
+  width: 90%;
+  max-width: 100%;
   margin-inline: auto;
-  padding-inline: var(--pad-x);
 }
 
 @media (prefers-reduced-motion: reduce) {

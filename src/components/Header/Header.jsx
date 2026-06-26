@@ -41,7 +41,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <Button href="#contacto" size="sm" className={styles.cta}>
+        <Button href="#contacto" size="lg" className={styles.cta}>
           RESERVÁ TU BOX
         </Button>
 
