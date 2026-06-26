@@ -1,0 +1,111 @@
+.hero {
+  position: relative;
+  background: var(--c-navy);
+  overflow: hidden;
+}
+
+/* Fondo full-bleed (solo desktop) */
+.bgDesktop {
+  display: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+}
+
+.title {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: var(--c-blue-accent);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+  max-width: 38ch;
+}
+
+/* ===================== MOBILE ===================== */
+.frameMobile {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 16 / 12;
+  margin-top: calc(var(--header-h) + 14px);
+}
+
+@media (max-width: 1023px) {
+  .content {
+    padding-bottom: 56px;
+    padding-top: 26px;
+    gap: 18px;
+  }
+  .title {
+    font-size: clamp(1.9rem, 8.4vw, 2.4rem);
+    line-height: 1.08;
+  }
+  .subtitle {
+    font-size: clamp(0.85rem, 3.7vw, 1rem);
+  }
+}
+
+/* ===================== DESKTOP ===================== */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+  }
+  .bgDesktop {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  .bgDesktop::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        100deg,
+        rgba(8, 12, 20, 0.92) 0%,
+        rgba(8, 12, 20, 0.62) 42%,
+        rgba(8, 12, 20, 0.12) 78%,
+        rgba(8, 12, 20, 0.05) 100%
+      ),
+      linear-gradient(0deg, rgba(8, 12, 20, 0.55) 0%, rgba(8, 12, 20, 0) 40%);
+  }
+  .frameMobile {
+    display: none;
+  }
+  .inner {
+    width: 100%;
+  }
+  .content {
+    padding-bottom: clamp(70px, 12vh, 130px);
+    max-width: 760px;
+    gap: 30px;
+  }
+  .title {
+    font-size: clamp(2.8rem, 4.4vw, 3.7rem);
+    line-height: 1.07;
+  }
+  .subtitle {
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  }
+}

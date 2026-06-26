@@ -1,0 +1,94 @@
+.services {
+  background: #fff;
+  padding-block: clamp(56px, 8vw, 104px);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  gap: clamp(28px, 4vw, 60px);
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.title {
+  color: var(--c-ink);
+  font-weight: 800;
+  font-size: clamp(1.55rem, 3vw, 2.3rem);
+  line-height: 1.12;
+}
+.accent {
+  color: var(--c-blue);
+}
+
+.text :global(ul) {
+  margin-block: 4px;
+}
+
+/* Recuadro azul de medidas */
+.measures {
+  align-self: flex-start;
+  background: var(--c-blue-accent);
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px 26px;
+  margin-top: 10px;
+  box-shadow: 0 12px 26px rgba(26, 98, 208, 0.28);
+}
+.measuresTitle {
+  display: block;
+  font-weight: 800;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  margin-bottom: 6px;
+}
+.measuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 500;
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+}
+
+/* Media: contenedor animado + cotas */
+.media {
+  width: 100%;
+}
+.mediaInner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 797 / 660;
+}
+.mediaInner > div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.dims {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 0.92fr 1.08fr;
+  }
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    /* en mobile: texto, medidas y luego contenedor (orden del diseño) */
+  }
+  .media {
+    margin-top: 8px;
+  }
+}

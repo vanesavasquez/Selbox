@@ -1,0 +1,12 @@
+.label {
+  display: inline-block;
+  color: var(--c-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: clamp(0.95rem, 1.4vw, 1.25rem);
+}
+
+.light {
+  color: #4f93f0;
+}

@@ -1,0 +1,87 @@
+.security {
+  background: var(--c-navy);
+  padding-block: clamp(48px, 6vw, 84px);
+  color: #fff;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Desktop: fila de 4 ---- */
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.icon {
+  width: clamp(118px, 11vw, 150px);
+  height: auto;
+  color: #fff;
+}
+
+.caption {
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ---- Mobile: carrusel ---- */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 8px;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla {
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  padding-block: 8px;
+}
+
+.arrow {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+  z-index: 2;
+}
+.arrow:hover {
+  color: #fff;
+}
+.arrow:active {
+  transform: scale(0.92);
+}

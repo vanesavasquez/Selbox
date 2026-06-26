@@ -1,0 +1,42 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600; /* Raleway SemiBold */
+  color: var(--c-ink);
+}
+
+.check {
+  color: var(--c-blue-accent);
+  flex-shrink: 0;
+}
+
+.md {
+  font-size: 1.05rem;
+}
+.md .check {
+  font-size: 28px;
+}
+
+.sm {
+  font-size: 0.95rem;
+  gap: 10px;
+}
+.sm .check {
+  font-size: 24px;
+}
+
+@media (max-width: 1023px) {
+  .md {
+    font-size: 0.95rem;
+  }
+  .md .check {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,44 @@
+/* ===== Fuentes auto-alojadas (variable fonts) ===== */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Paleta (extraída del PDF) */
+  --c-blue: #0054a9;          /* primario: labels, títulos resaltados */
+  --c-blue-accent: #1a62d0;   /* acento: botones, checks, recuadro medidas */
+  --c-blue-dark: #003f80;     /* hover de botones */
+  --c-navy: #0e141f;          /* fondos oscuros (hero overlay, seguridad, footer) */
+  --c-ink: #262626;           /* texto oscuro */
+  --c-gray: #6c7480;          /* texto gris apagado */
+  --c-gray-soft: #b2b3b2;     /* gris claro (subtítulos sobre oscuro) */
+  --c-white: #ffffff;
+  --c-bg: #ffffff;
+
+  /* Tipografía */
+  --font-body: 'Raleway', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-alt: 'Montserrat', var(--font-body); /* botón WhatsApp + dirección footer */
+
+  /* Layout */
+  --maxw: 1180px;
+  --pad-x: clamp(20px, 6.6vw, 90px);
+  --header-h: 84px;
+  --radius: 14px;
+  --radius-pill: 999px;
+
+  /* Animación */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-card: 0 10px 30px rgba(14, 20, 31, 0.10);
+  --shadow-btn: 0 8px 22px rgba(26, 98, 208, 0.35);
+}

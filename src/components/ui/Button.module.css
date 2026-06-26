@@ -1,0 +1,64 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease),
+    background-color 0.2s var(--ease);
+  will-change: transform;
+}
+
+.label {
+  line-height: 1;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tamaños */
+.sm {
+  padding: 10px 20px;
+  font-size: 0.82rem;
+}
+.md {
+  padding: 14px 28px;
+  font-size: 0.95rem;
+}
+.lg {
+  padding: 17px 34px;
+  font-size: 1.02rem;
+}
+
+/* Variantes */
+.accent {
+  background: var(--c-blue-accent);
+  color: #fff;
+  box-shadow: var(--shadow-btn);
+}
+.accent:hover {
+  background: #1556bb;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(26, 98, 208, 0.45);
+}
+
+.navy {
+  background: var(--c-navy);
+  color: #fff;
+}
+.navy:hover {
+  background: #18222f;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
