@@ -78,4 +78,9 @@ src/
   partir de frames `.webp` dibujados en un `<canvas>`; arranca al entrar en
   pantalla y respeta `prefers-reduced-motion`.
 - Los 4 íconos de seguridad son **SVG a medida** recreados del diseño.
-```
+- El contenido ocupa el **90 % del ancho del viewport**; todas las medidas están
+  en `rem` o porcentajes (sin `px` fijos).
+- **Proporciones de secciones:** Hero y About 100 vh · Seguridad 50 vh ·
+  Servicios 100 vh · Contacto + Footer juntos 90 vh (63 vh + 27 vh).
+- La sección de **Seguridad** usa **Embla carousel en todos los viewports**
+  (25 % por slide en desktop = 4 visibles; 100 % en mobile = 1 por vez).

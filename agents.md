@@ -116,11 +116,12 @@ selfbox-landing/
 --font-alt: 'Montserrat', var(--font-body);           /* botón WhatsApp + dirección footer */
 
 /* Layout */
---maxw: 1180px;                   /* ancho máximo del contenido */
---pad-x: clamp(20px, 6.6vw, 90px); /* padding lateral responsivo */
---header-h: 84px;                 /* altura del header fijo */
---radius: 14px;
+--maxw: 100vw;              /* sin límite de px; el .container usa width: 90% */
+--pad-x: 5vw;               /* usado solo en el mobile menu overlay */
+--header-h: 5.5rem;         /* ≈ 88px */
+--radius: 0.875rem;
 --radius-pill: 999px;
+--radius-rect: 0.5rem;      /* botones semi-rectangulares */
 
 /* Animación */
 --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -128,6 +129,8 @@ selfbox-landing/
 ```
 
 Breakpoint principal: `1024px` (mobile-first). Las secciones tienen `id` para el scrollspy.
+
+El `.container` usa `width: 90%; max-width: 100%; margin-inline: auto;` — el contenido ocupa siempre el 90 % del viewport sin padding lateral fijo.
 
 ---
 
@@ -160,43 +163,47 @@ directamente — siempre editar `content.js`.
 ## 7. Secciones y layout
 
 ### Header
-- `position: fixed`, `z-index: 100`, `height: var(--header-h)` (84px).
+- `position: fixed`, `z-index: 100`, `height: var(--header-h)` (5.5rem ≈ 88px).
 - **Desktop:** transparente → `rgba(14,20,31,0.96)` con `backdrop-filter: blur(8px)` cuando `scrolled`.
 - Scrollspy vía `useScroll()`: compara `activeId` con cada `NAV_LINKS[i].id` para el underline activo.
-- CTA "RESERVÁ TU BOX" → `<Button href={WHATSAPP_URL} variant="accent">`.
+- Logo: `height: auto; max-height: 3.5rem` (tamaño natural sin recorte).
+- Nav links: `font-size: 1.5rem`.
+- CTA "RESERVÁ TU BOX" → `<Button size="lg">` (semi-rectangular).
 - **Mobile:** hamburguesa (`menu`/`close` icon) + overlay animado con `AnimatePresence`.
   Bloquea el scroll del body cuando está abierto (`document.body.style.overflow`).
 
 ### Hero (`id="home"`)
-- **Desktop:** `min-height: 100vh`, `background-image` + gradiente overlay oscuro.
-  Entrada escalonada con Framer Motion: título → subtítulo → botón.
-- **Mobile:** foto enmarcada (border-radius, aspect-ratio 16/12) sobre fondo navy, luego texto abajo.
+- `min-height: 100vh` en **ambos** viewports.
+- **Desktop:** `background-image` + gradiente overlay oscuro. Entrada escalonada Framer Motion.
+- **Mobile:** foto enmarcada (border-radius 1rem, aspect-ratio 16/12) sobre fondo navy, luego texto.
+- Título: `font-size: 2.5rem`. Subtítulo: `font-size: 1.8rem` (mobile: 1.3rem).
 - Usa `<picture>` con `srcSet` para `foto-home-mobile.webp` en mobile.
 
 ### About (`id="nosotros"`)
-- CSS Grid: `1.05fr / 0.95fr` en desktop, columna única en mobile.
-- Texto + `<CheckList>` a la izquierda, `<picture>` a la derecha (o abajo en mobile).
+- `min-height: 100vh`. CSS Grid: **`0.4fr / 0.6fr`** en desktop (imagen ocupa el 60 %).
+- Título: `clamp(1.9rem, 2.8vw, 2.6rem)`. Párrafos: `clamp(1.1rem, 1.4vw, 1.3rem)`.
 
 ### Security (`id="seguridad"`)
-- Fondo navy (`--c-navy`).
-- **Desktop (≥1024px):** 4 columnas, cada hexágono con `<Reveal>`.
-- **Mobile:** Embla carousel, 1 ítem visible, autoplay 3800ms, botones `chevron_left`/`chevron_right`.
-- Switch entre modos vía `useMediaQuery('(min-width: 1024px)')`.
+- Fondo navy. `min-height: 50vh`.
+- **Embla carousel en todos los viewports** (sin bifurcación desktop/mobile).
+  Desktop: `flex: 0 0 25%` → 4 ítems visibles. Mobile: `flex: 0 0 100%` → 1 ítem.
+- Autoplay 3800ms, loop, flechas `chevron_left`/`chevron_right` a ambos lados.
+- Íconos SVG: `width: clamp(9rem, 14vw, 12rem)`. Caption: `font-size: 1.3rem`.
 
 ### Services (`id="servicios"`)
-- Grid 2 columnas (texto | media) en desktop.
-- Columna texto: `<CheckList>` de 5 ítems + recuadro azul con medidas de los box.
-- Columna media: `<ContainerAnimation>` (canvas) + `<Dimensions>` (SVG overlay posicionado absoluto).
+- `min-height: 100vh`. Grid desktop: **`0.3fr / 0.7fr`** (animación ocupa el 70 %).
+- Columna texto: `<CheckList>` de 5 ítems + recuadro azul con medidas.
+- Columna media: `<ContainerAnimation>` (canvas) + `<Dimensions>` (SVG overlay absoluto).
 
 ### Contact (`id="contacto"`)
-- `<picture>` como fondo + overlay de gradiente.
-- Botón WhatsApp: texto "ESCRIBINOS POR WHATSAPP" en desktop / "ESCRIBINOS" en mobile.
-- Usa `font-family: var(--font-alt)` (Montserrat) para el botón CTA, igual que el diseño.
+- `min-height: 63vh` (= 70 % de 90 vh). `<picture>` como fondo + overlay de gradiente.
+- Título: `clamp(1.9rem, 3vw, 2.8rem)`. Subtítulo: `clamp(1.2rem, 1.8vw, 1.7rem)`.
+- Botón: "ESCRIBINOS POR WHATSAPP" desktop / "ESCRIBINOS" mobile, `font-family: var(--font-alt)`.
 
 ### Footer
-- Fondo navy. Logo blanco + ícono `location_on` (filled) + dirección (Montserrat Medium).
-- Íconos de marca: `<WhatsAppIcon>` y `<InstagramIcon>` (SVG inline, `fill="currentColor"`).
-- Hover: `translateY(-3px)` en los íconos de redes.
+- `min-height: 27vh` (= 30 % de 90 vh). Contact + Footer juntos = 90 vh.
+- Logo: `height: 4rem`. Dirección (Montserrat): `font-size: 1.2rem`. Título ubicación: `1.4rem`.
+- Íconos sociales SVG: `width: 2.5rem; height: 2.5rem` (≈ 40px). Hover: `translateY(-3px)`.
 
 ---
 
@@ -207,10 +214,10 @@ Wrapper Framer Motion con `whileInView` (fade + translateY). Respeta `prefers-re
 (muestra instantáneo sin animación). Parámetros: `delay`, `y` (desplazamiento inicial).
 
 ### `<Button>` (`ui/Button.jsx`)
-Pill button/link. Props:
+Botón/enlace **semi-rectangular** (`border-radius: var(--radius-rect)` = 0.5rem). Props:
 - `href` → renderiza `<a>`, sin `href` → `<button>`.
 - `variant`: `'accent'` (azul, default) | `'navy'`.
-- `size`: `'sm'` | `'md'` | `'lg'`.
+- `size`: `'sm'` (0.9rem) | `'md'` (1rem) | `'lg'` (1.15rem, padding 1.1rem 2.6rem).
 - Hover: `translateY(-2px)` + `var(--shadow-btn)`.
 
 ### `<Icon>` (`ui/Icon.jsx`)
@@ -243,7 +250,7 @@ Eyebrow label azul, uppercase, tracking ancho. Prop `light` para sobre fondos os
 
 - **Carga:** `import.meta.glob('...container/*.webp', { eager: true })` → array ordenado de URLs.
 - **Preload:** un `Image()` por frame, espera `img.decode()` antes de empezar.
-- **Loop:** 15fps (≈66ms/frame). Al llegar al frame 23, pausa 900ms (`HOLD_MS`), luego vuelve a 0.
+- **Loop:** 7fps (≈143ms/frame, animación lenta). Al llegar al frame 23, pausa 1400ms (`HOLD_MS`), luego vuelve a 0.
 - **Trigger:** `useInView(wrapRef, { amount: 0.4 })` — arranca cuando el 40% del contenedor está visible.
 - **`prefers-reduced-motion`:** si está activo, muestra directamente el último frame (contenedor lleno) sin animación.
 - Los frames se generaron extrayendo cada 10° frame del `Conteiner animado.mp4` (24fps, 240 frames total),
