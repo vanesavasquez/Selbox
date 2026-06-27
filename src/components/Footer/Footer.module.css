@@ -13,10 +13,11 @@
   justify-content: space-between;
   gap: 1.75rem;
   width: 100%;
+  align-self: stretch;
 }
 
 .logo {
-  height: 4rem;
+  height: 100%;
   width: auto;
   flex-shrink: 0;
 }
@@ -94,6 +95,6 @@
     align-items: center;
   }
   .logo {
-    height: 3.5rem;
+    height: 100%;
   }
 }

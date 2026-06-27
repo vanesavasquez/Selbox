@@ -1,17 +1,15 @@
-import logoWhite from '../../assets/media/logo-white.png'
-import logoColor from '../../assets/media/logo-color.png'
+import logoHorizontal from '../../assets/media/logo-horizontal.png'
 
-// Logo SelfBox. variant="white" (sobre fondos oscuros, uso principal del diseño)
-// o "color" (sobre fondos claros).
-export default function SelfboxLogo({ variant = 'white', className, style }) {
+// Logo SelfBox (horizontal). Uso principal en header y footer.
+export default function SelfboxLogo({ className, style }) {
   return (
     <img
-      src={variant === 'white' ? logoWhite : logoColor}
+      src={logoHorizontal}
       alt="SelfBox · Módulos de guardado"
       className={className}
       style={style}
-      width="362"
-      height="95"
+      width="510"
+      height="250"
       decoding="async"
     />
   )
