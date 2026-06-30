@@ -86,4 +86,15 @@
     aspect-ratio: 16 / 10;
     margin-top: 0.625rem;
   }
+  .title {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1.2rem;
+    max-width: none;
+  }
+  .body {
+    font-size: 1.2rem;
+    max-width: none;
+  }
 }

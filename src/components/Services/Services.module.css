@@ -106,4 +106,10 @@
   .media {
     margin-top: 0.5rem;
   }
+  .title {
+    font-size: 2rem;
+  }
+  .measures {
+    align-self: center;
+  }
 }

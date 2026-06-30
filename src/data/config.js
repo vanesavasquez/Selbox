@@ -6,14 +6,14 @@
 
 // Número de WhatsApp con código de país, SOLO dígitos.
 // Ej: Argentina + Gualeguaychú => 5493446XXXXXXX
-export const WHATSAPP_NUMBER = '5493446000000' // TODO: número real
+export const WHATSAPP_NUMBER = '5493446644026'
 
 // Mensaje que se autocompleta al abrir WhatsApp
 export const WHATSAPP_MESSAGE =
   '¡Hola SelfBox! Quiero reservar un box / consultar disponibilidad.'
 
 // Instagram (usuario o URL completa)
-export const INSTAGRAM_URL = 'https://instagram.com/selfbox' // TODO: usuario real
+export const INSTAGRAM_URL = 'https://www.instagram.com/selfbox.arg?igsh=enA3ejUwODdmbXpl'
 
 // Dirección física
 export const ADDRESS = 'Boulevard Montana 1050, Gualeguaychú, Entre Ríos'

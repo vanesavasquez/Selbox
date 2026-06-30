@@ -80,10 +80,11 @@
     gap: 1.125rem;
   }
   .title {
-    font-size: 2.1563rem;
+    font-size: 3rem;
   }
   .subtitle {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
+    max-width: none;
   }
 }
 
