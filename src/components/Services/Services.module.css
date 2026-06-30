@@ -83,6 +83,39 @@
   overflow: visible;
 }
 
+/* Cotas naranjas alineadas en perspectiva con el contenedor */
+.dimLineWidth {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-6deg) translateY(14px);
+}
+.dimLineDepth {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-18deg) translateX(6px) translateY(6px);
+}
+.dimLineHeight {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateX(10px);
+}
+
+.dimLabelWidth {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-6deg) translateY(18px);
+}
+.dimLabelDepth {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-18deg) translateX(8px) translateY(4px);
+}
+.dimLabelHeight {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateX(12px);
+}
+
 @media (min-width: 1220px) {
   .grid {
     grid-template-columns: 0.3fr 0.7fr;

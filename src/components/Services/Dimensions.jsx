@@ -12,17 +12,17 @@ export default function Dimensions() {
         </marker>
       </defs>
       <g stroke="#b85008" strokeWidth="2" markerStart="url(#ar)" markerEnd="url(#ar)">
-        {/* ancho (6 M) - diagonal en perspectiva */}
-        <line x1="110" y1="635" x2="590" y2="575" />
-        {/* profundidad (2,4 M) - diagonal inferior derecha */}
-        <line x1="628" y1="600" x2="742" y2="558" />
-        {/* alto (2,6 M) - lateral derecho */}
-        <line x1="775" y1="150" x2="775" y2="545" />
+        {/* ancho (6 M) - perspectiva frontal */}
+        <line x1="90" y1="608" x2="620" y2="608" className={styles.dimLineWidth} />
+        {/* profundidad (2,4 M) - diagonal derecha */}
+        <line x1="632" y1="602" x2="750" y2="556" className={styles.dimLineDepth} />
+        {/* alto (2,6 M) - vertical derecho */}
+        <line x1="775" y1="150" x2="775" y2="545" className={styles.dimLineHeight} />
       </g>
       <g fill="#b85008" fontFamily="var(--font-body)" fontWeight="700">
-        <text x="360" y="625" textAnchor="middle" fontSize="26" transform="rotate(-12, 360, 625)">{dims.width}</text>
-        <text x="712" y="595" textAnchor="start" fontSize="26">{dims.depth}</text>
-        <text x="788" y="350" textAnchor="start" fontSize="26">{dims.height}</text>
+        <text x="350" y="640" textAnchor="middle" fontSize="26" className={styles.dimLabelWidth}>{dims.width}</text>
+        <text x="720" y="598" textAnchor="start" fontSize="26" className={styles.dimLabelDepth}>{dims.depth}</text>
+        <text x="788" y="350" textAnchor="start" fontSize="26" className={styles.dimLabelHeight}>{dims.height}</text>
       </g>
     </svg>
   )
