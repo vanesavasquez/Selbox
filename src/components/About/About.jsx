@@ -34,12 +34,12 @@ export default function About() {
             <p className={styles.body}>{ABOUT.paragraphs[1]}</p>
           </Reveal>
 
-          <CheckList items={ABOUT.bullets} />
+          <CheckList items={ABOUT.bullets} variant="blue" />
         </div>
 
         <Reveal className={styles.media} delay={0.1} y={30}>
           <picture>
-            <source media="(max-width: 1023px)" srcSet={aboutImgMobile} />
+            <source media="(max-width: 1219px)" srcSet={aboutImgMobile} />
             <img src={aboutImg} alt="Contenedores SelfBox apilados" className={styles.image} />
           </picture>
         </Reveal>

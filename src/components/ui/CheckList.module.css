@@ -8,8 +8,18 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  font-weight: 700; /* Raleway Bold */
+}
+
+/* About: azul, ExtraBold */
+.blue {
+  font-weight: 800;
   color: var(--c-blue);
+}
+
+/* Services: oscuro, SemiBold */
+.dark {
+  font-weight: 600;
+  color: var(--c-ink);
 }
 
 .check {
@@ -17,11 +27,12 @@
   flex-shrink: 0;
 }
 
+/* PC: 19px = 1.1875rem */
 .md {
-  font-size: 1.8rem;
+  font-size: 1.1875rem;
 }
 .md .check {
-  font-size: 32px;
+  font-size: 30px;
 }
 
 .sm {
@@ -32,11 +43,14 @@
   font-size: 24px;
 }
 
-@media (max-width: 1023px) {
-  .md {
-    font-size: 1.8rem;
+@media (max-width: 1219px) {
+  .md.blue {
+    font-size: 0.8125rem;
+  }
+  .md.dark {
+    font-size: 0.9375rem;
   }
   .md .check {
-    font-size: 32px;
+    font-size: 24px;
   }
 }

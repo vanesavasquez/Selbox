@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <section id="contacto" className={styles.contact}>
       <picture className={styles.bg}>
-        <source media="(max-width: 1023px)" srcSet={bgMobile} />
+        <source media="(max-width: 1219px)" srcSet={bgMobile} />
         <img src={bgDesktop} alt="" aria-hidden="true" />
       </picture>
       <span className={styles.overlay} aria-hidden="true" />

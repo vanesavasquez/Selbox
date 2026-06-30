@@ -18,9 +18,12 @@ export default function Hero() {
         style={{ backgroundImage: `url(${heroDesktop})` }}
         aria-hidden="true"
       />
+      <div
+        className={styles.bgMobile}
+        style={{ backgroundImage: `url(${heroMobile})` }}
+        aria-hidden="true"
+      />
       <div className={`container ${styles.inner}`}>
-        <img className={styles.frameMobile} src={heroMobile} alt="" />
-
         <motion.div
           className={styles.content}
           initial="hidden"

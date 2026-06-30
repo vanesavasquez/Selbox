@@ -8,8 +8,8 @@ export default function SelfboxLogo({ className, style }) {
       alt="SelfBox · Módulos de guardado"
       className={className}
       style={style}
-      width="510"
-      height="250"
+      width="2876"
+      height="751"
       decoding="async"
     />
   )

@@ -23,9 +23,9 @@
   z-index: -1;
   background: linear-gradient(
     90deg,
-    rgba(8, 12, 20, 0.9) 0%,
-    rgba(8, 12, 20, 0.72) 45%,
-    rgba(8, 12, 20, 0.5) 100%
+    rgba(0, 84, 169, 0.9) 0%,
+    rgba(0, 84, 169, 0.72) 45%,
+    rgba(0, 84, 169, 0.5) 100%
   );
 }
 
@@ -43,13 +43,13 @@
 }
 .title {
   font-weight: 800;
-  font-size: 4.5rem;
+  font-size: 2.7313rem;
   line-height: 1.1;
 }
 .subtitle {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
-  font-size: clamp(1.2rem, 1.8vw, 1.7rem);
+  font-size: 2rem;
   margin-top: 0.5rem;
 }
 
@@ -62,7 +62,7 @@
   display: none;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1219px) {
   .inner {
     flex-direction: column;
     align-items: center;
@@ -74,5 +74,11 @@
   }
   .ctaShort {
     display: inline;
+  }
+  .title {
+    font-size: 1.5813rem;
+  }
+  .subtitle {
+    font-size: 1.1875rem;
   }
 }

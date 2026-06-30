@@ -27,7 +27,7 @@ export default function Services() {
             </h2>
           </Reveal>
 
-          <CheckList items={SERVICES.bullets} />
+          <CheckList items={SERVICES.bullets} variant="dark" />
 
           <Reveal delay={0.1} className={styles.measures}>
             <strong className={styles.measuresTitle}>{SERVICES.measures.title}</strong>

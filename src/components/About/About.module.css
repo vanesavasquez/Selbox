@@ -22,7 +22,7 @@
 .title {
   color: var(--c-ink);
   font-weight: 800;
-  font-size: 4.5rem;
+  font-size: 1.5813rem;
   line-height: 1.12;
   margin-top: 0.25rem;
 }
@@ -31,15 +31,15 @@
 }
 
 .lead {
-  font-weight: 700;
+  font-weight: 800;
   color: var(--c-ink);
-  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  font-size: 0.6875rem;
   max-width: 44ch;
 }
 .body {
-  font-weight: 500;
-  color: var(--c-gray);
-  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  font-weight: 600;
+  color: var(--c-ink);
+  font-size: 0.6875rem;
   max-width: 44ch;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .media {
-  width: 50vw;
+  width: 100%;
   margin-inline: auto;
 }
 .image {
@@ -59,9 +59,9 @@
   box-shadow: var(--shadow-card);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1220px) {
   .grid {
-    grid-template-columns: 1fr 50vw;
+    grid-template-columns: 0.4fr 0.6fr;
   }
   .media {
     width: 100%;
@@ -70,9 +70,18 @@
   .image {
     aspect-ratio: 4 / 3.2;
   }
+  .title {
+    font-size: 2.4438rem;
+  }
+  .lead {
+    font-size: 1.0625rem;
+  }
+  .body {
+    font-size: 1.0625rem;
+  }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1219px) {
   .image {
     aspect-ratio: 16 / 10;
     margin-top: 0.625rem;
