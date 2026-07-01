@@ -1,15 +1,16 @@
-import logoHorizontal from '../../assets/media/logo-horizontal.png'
+import logoWhite from '../../assets/media/logo-white.png'
 
-// Logo SelfBox (horizontal). Uso principal en header y footer.
+// Logo SelfBox (horizontal, versión blanca para fondos oscuros).
+// Se usa en Header (sobre hero oscuro / solid) y Footer (navy).
 export default function SelfboxLogo({ className, style }) {
   return (
     <img
-      src={logoHorizontal}
+      src={logoWhite}
       alt="SelfBox · Módulos de guardado"
       className={className}
       style={style}
-      width="2876"
-      height="751"
+      width="9413"
+      height="3106"
       decoding="async"
     />
   )
