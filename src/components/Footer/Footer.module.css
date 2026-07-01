@@ -16,7 +16,7 @@
 }
 
 .logo {
-  height: 4.3125rem;
+  height: 5.3125rem;
   width: auto;
   flex-shrink: 0;
 }
@@ -97,7 +97,7 @@
     font-size: 0.6875rem;
   }
   .logo {
-    height: 3.3125rem;
+    height: 4.3125rem;
   }
   .social a svg {
     width: 1.8125rem;
