@@ -87,17 +87,17 @@
 .dimLineWidth {
   transform-box: fill-box;
   transform-origin: center;
-  transform: rotate(12deg) translateY(18px);
+  transform: rotate(12deg) translateY(1px);
 }
 .dimLineDepth {
   transform-box: fill-box;
   transform-origin: center;
-  transform: rotate(-18deg) translateX(28px) translateY(15px);
+  transform: rotate(-18deg) translateX(28px) translateY(20px);
 }
 .dimLineHeight {
   transform-box: fill-box;
   transform-origin: center;
-  transform: translateX(23px);
+  transform: translateX(30px) translateY(-35px);
 }
 
 .dimLabelWidth {
@@ -113,7 +113,7 @@
 .dimLabelHeight {
   transform-box: fill-box;
   transform-origin: center;
-  transform: translateX(12px);
+  transform: translateX(30px);
 }
 
 @media (min-width: 1220px) {

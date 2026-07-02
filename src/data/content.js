@@ -39,6 +39,9 @@ export const SECURITY = {
     { type: 'camera', lines: ['Cámaras de', 'seguridad 24 HS'] },
     { type: 'alarm', lines: ['Sistema de', 'alarmas'] },
     { type: 'panel', lines: ['Alarma individual', 'Opcional'] },
+    { type: 'dome-camera', lines: ['Cámara individual', 'Opcional'] },
+    { type: 'padlock', lines: ['Accesible'] },
+    { type: 'shield', lines: ['Predio', 'cercado'] },
   ],
 }
 

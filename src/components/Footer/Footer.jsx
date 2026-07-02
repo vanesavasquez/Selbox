@@ -1,6 +1,5 @@
 import SelfboxLogo from '../ui/SelfboxLogo.jsx'
-import Icon from '../ui/Icon.jsx'
-import { WhatsAppIcon, InstagramIcon } from '../ui/BrandIcons.jsx'
+import { LocationIcon, WhatsAppIcon, InstagramIcon } from '../ui/BrandIcons.jsx'
 import { FOOTER } from '../../data/content.js'
 import { ADDRESS, MAPS_URL, WHATSAPP_URL, INSTAGRAM_URL } from '../../data/config.js'
 import styles from './Footer.module.css'
@@ -13,7 +12,7 @@ export default function Footer() {
 
         <a className={styles.where} href={MAPS_URL} target="_blank" rel="noopener noreferrer">
           <span className={styles.pin}>
-            <Icon name="location_on" filled size={22} />
+            <LocationIcon className={styles.icon} />
           </span>
           <span className={styles.whereText}>
             <strong>{FOOTER.whereTitle}</strong>
@@ -23,10 +22,10 @@ export default function Footer() {
 
         <div className={styles.social}>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <WhatsAppIcon size={26} />
+            <WhatsAppIcon className={styles.icon} />
           </a>
           <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <InstagramIcon size={26} />
+            <InstagramIcon className={styles.icon} />
           </a>
         </div>
       </div>

@@ -35,11 +35,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 50%;
-  background: #fff;
-  color: var(--c-navy);
   flex-shrink: 0;
 }
 
@@ -66,18 +61,17 @@
   gap: 1.25rem;
   flex-shrink: 0;
 }
+.icon {
+  width: clamp(2rem, 3.5vw, 3.375rem);
+  height: auto;
+}
+
 .social a {
   display: inline-flex;
-  color: #fff;
-  transition: transform 0.2s var(--ease), color 0.2s var(--ease);
-}
-.social a svg {
-  width: 3.375rem;
-  height: 3.375rem;
+  transition: transform 0.2s var(--ease);
 }
 .social a:hover {
   transform: translateY(-3px);
-  color: #4f93f0;
 }
 
 @media (max-width: 1219px) {
@@ -99,8 +93,8 @@
   .logo {
     height: 4.3125rem;
   }
-  .social a svg {
+  .icon {
     width: 1.8125rem;
-    height: 1.8125rem;
+    height: auto;
   }
 }
