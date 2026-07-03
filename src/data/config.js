@@ -16,7 +16,7 @@ export const WHATSAPP_MESSAGE =
 export const INSTAGRAM_URL = 'https://www.instagram.com/selfbox.arg?igsh=enA3ejUwODdmbXpl'
 
 // Dirección física
-export const ADDRESS = 'Boulevard Montana 1050, Gualeguaychú, Entre Ríos'
+export const ADDRESS = 'Boulevard Montana 1055, Gualeguaychú, Entre Ríos'
 
 // Link a Google Maps generado desde la dirección
 export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(

@@ -42,7 +42,6 @@ export default function Services() {
         <Reveal className={styles.media} delay={0.1} y={30}>
           <div className={styles.mediaInner}>
             <ContainerAnimation />
-            <Dimensions />
           </div>
         </Reveal>
       </div>
