@@ -86,7 +86,7 @@ h3 {
 
 /* Contenedor centrado reutilizable */
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 100%;
   margin-inline: auto;
 }
