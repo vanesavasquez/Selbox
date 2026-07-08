@@ -2,9 +2,15 @@
   position: relative;
   background: var(--c-navy);
   overflow: hidden;
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1219px) {
+  .hero {
+    min-height: 70vh;
+  }
 }
 
 .bgDesktop {

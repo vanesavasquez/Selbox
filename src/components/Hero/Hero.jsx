@@ -16,14 +16,14 @@ export default function Hero() {
       <div
         className={styles.bgDesktop}
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%), url(${heroDesktop})`
+          backgroundImage: `linear-gradient(to right, rgba(0,84,169,0.6) 0%, rgba(0,84,169,0.3) 60%, rgba(0,84,169,0) 100%), url(${heroDesktop})`
         }}
         aria-hidden="true"
       />
       <div
         className={styles.bgMobile}
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%), url(${heroMobile})`
+          backgroundImage: `linear-gradient(to right, rgba(0,84,169,0.8) 0%, rgba(0,84,169,0.5) 70%, rgba(0,84,169,0) 100%), url(${heroMobile})`
         }}
         aria-hidden="true"
       />
