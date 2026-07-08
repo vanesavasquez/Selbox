@@ -15,12 +15,16 @@ export default function Hero() {
     <section id="home" className={styles.hero}>
       <div
         className={styles.bgDesktop}
-        style={{ backgroundImage: `url(${heroDesktop})` }}
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%), url(${heroDesktop})`
+        }}
         aria-hidden="true"
       />
       <div
         className={styles.bgMobile}
-        style={{ backgroundImage: `url(${heroMobile})` }}
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%), url(${heroMobile})`
+        }}
         aria-hidden="true"
       />
       <div className={`container ${styles.inner}`}>
