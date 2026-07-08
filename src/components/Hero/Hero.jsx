@@ -4,8 +4,8 @@ import Icon from '../ui/Icon.jsx'
 import Highlight from '../ui/Highlight.jsx'
 import { HERO } from '../../data/content.js'
 import { WHATSAPP_URL } from '../../data/config.js'
-import heroDesktop from '../../assets/media/foto-home.webp'
-import heroMobile from '../../assets/media/foto-home-mobile.webp'
+import heroDesktop from '../../assets/media/foto-home.png'
+import heroMobile from '../../assets/media/foto-home.png'
 import styles from './Hero.module.css'
 
 const EASE = [0.22, 1, 0.36, 1]
