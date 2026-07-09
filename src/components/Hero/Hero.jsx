@@ -23,7 +23,7 @@ export default function Hero() {
       <div
         className={styles.bgMobile}
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%), url(${heroMobile})`
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0) 100%), url(${heroMobile})`
         }}
         aria-hidden="true"
       />
