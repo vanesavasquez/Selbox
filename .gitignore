@@ -5,3 +5,18 @@ dist-ssr
 .DS_Store
 npm-debug.log*
 .vite
+
+# Credenciales y datos sensibles
+credentials.md
+../credentials.md
+
+# Archivos internos de agentes IA / proceso de desarrollo
+agents.md
+AGENTS.md
+PROJECT.md
+*.agents.md
+
+# Configuración local del editor / IDE
+launch.json
+settings.local.json
+.claude/
