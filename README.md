@@ -84,3 +84,6 @@ src/
   Servicios 100 vh · Contacto + Footer juntos 90 vh (63 vh + 27 vh).
 - La sección de **Seguridad** usa **Embla carousel en todos los viewports**
   (25 % por slide en desktop = 4 visibles; 100 % en mobile = 1 por vez).
+  
+## Pagina web
+https://selfbox.com.ar/
